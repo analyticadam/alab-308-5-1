@@ -2,12 +2,8 @@
 
 // ***** Part 1: Thinking Functionally *****
 
-//  ======          PART 1      =======
-//Take an array of numbers and return the sum.
-
 //Take an array of numbers and return the sum.
 let arrOfNum = [7, 3, 9, 21];
-
 function sumOfNums(arr) {
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -15,8 +11,11 @@ function sumOfNums(arr) {
     }
     return sum
 }
-
 console.log(`the sum of sumOfNums is: ${sumOfNums(arrOfNum)}`);
+/*
+Output code below:
+the sum of sumOfNums is: 40
+*/
 
 // ******* Take an array of numbers and return the average ******
 function aveOfNum(aveNum) {
@@ -30,8 +29,10 @@ function aveOfNum(aveNum) {
     return average;
 }
 console.log(`The average of ${arrOfNum} is ${aveOfNum(arrOfNum)}`);
+/*
+Output code below:The average of 7,3,9,21 is 10
+*/
 
-//Take an array of strings and return the longest string.
 // ****** Take an array of strings and return the longest string. *******
 const arrStrings = ["Adam", "Gregory", "Marcus", "Yannick"];
 function longestStr(str) {
@@ -43,11 +44,14 @@ function longestStr(str) {
     }
     return longestStr;
 }
-
 console.log(`The longest string in the array is ${longestStr(arrStrings)}`);
+/*
+Output code below:
+Output code below:
+The longest string in the array is Gregory
+*/
 
 //Take an array of strings, and a number and return an array of the strings that are longer than the given number. 
-
 const arrStrings1 = ["Adam", "Gregory", "Marcus", "Yannick", "Christopher"];
 //return strings longer than the given number
 function arrStringsLongerThan(strArr, num) {
@@ -59,7 +63,10 @@ function arrStringsLongerThan(strArr, num) {
     return StringRuler;
 }
 console.log(arrStringsLongerThan(arrStrings1, 6));
+/*
+Output code below:
 
+*/
 
 //Take a number, n, and print every number between 1 and n without using loops. Use recursion.
 //returns number between 1 to 'n'
@@ -71,8 +78,15 @@ function countdown(n) {
     console.log(n);
 }
 
-countdown(7);
-
+countdown(5);
+/*
+Output code below:
+//1
+//2
+//3
+//4
+//5
+*/
 
 // ***** Part 2: Thinking Methodically *****
 
@@ -94,11 +108,18 @@ function sortAge(arr) {
     });
 }
 console.log(sortAge(data));
+/*
+Output data below:
+[
+    { id: '57', name: 'Bob', occupation: 'Fry Cook', age: '19' },
+    { id: '48', name: 'Barry', occupation: 'Runner', age: '25' },
+    { id: '42', name: 'Bruce', occupation: 'Knight', age: '41' },
+    { id: '63', name: 'Blaine', occupation: 'Quiz Master', age: '58' },
+    { id: '7', name: 'Bilbo', occupation: 'None', age: '111' }
+  ]
+*/
 
 //part 2 second bullet
-// data.pop() times 2 easy way out
-// console.log(data);
-
 function under50(arr, maxAge) {
     let filterArr = arr.filter(function (person) {
         //creates a filter with an option for any max age input
@@ -122,11 +143,15 @@ function under50(arr, maxAge) {
 }
 const dataSorted = under50(data, 50);
 console.log(dataSorted);
-// here is what printed
-// { id: 57, name: 'Bob', job: 'Fry Cook', age: 20 },
-// { id: 48, name: 'Barry', job: 'Runner', age: 26 },
-// { id: 42, name: 'Bruce', job: 'Knight', age: 42 }
+/*
+Output code below:
+{ id: 57, name: 'Bob', job: 'Fry Cook', age: 20 },
+{ id: 48, name: 'Barry', job: 'Runner', age: 26 },
+{ id: 42, name: 'Bruce', job: 'Knight', age: 42 }
+*/
 
+/*
+Output code below:
 // part 2 fourth bullet
 let ageArr = data.Sorted.map(function (person) {
     // sorts out just the age input
@@ -148,11 +173,11 @@ let avg = sumOfAge / ageArr.length; // divides the average age but the length of
 // ========== Part 3: Thinking Critically ==========
 const starwars = [
     {name: "Luke", who: "Jedi", color: "Blue" },
-    {name: "Luke", who: "Jedi", color: "Blue" },
-    {name: "Luke", who: "Jedi", color: "Blue" },
-    {name: "Luke", who: "Jedi", color: "Blue" },
-    {name: "Luke", who: "Jedi", color: "Blue" },
-    {name: "Luke", who: "Jedi", color: "Blue" },
+    {name: "Darth Vader", who: "Jedi", color: "Black" },
+    {name: "Chewy", who: "Jedi", color: "Brown" },
+    {name: "Han Solo", who: "Jedi", color: "Blue" },
+    {name: "Princess Leia", who: "Jedi", color: "White" },
+    {name: "Master Yoda", who: "Jedi", color: "Green" },
     ]
 starwars[0].age = 41;
 
@@ -171,7 +196,7 @@ const copyofFamilyInOneYear = family.map(function (obj) { // map to the age key 
 console.log(copyofFamilyInOneYear);
 // copy output code here
 
-const data = new Date();
+const date = new Date();
 console.log(date);
 //copy output code here
 
@@ -184,3 +209,4 @@ const insertnewarrayhere = copyofFamilyInOneYear.map(function (obj) {// map to t
 });
 console.log(insertnewarrayhere);
 //copy outputcode here
+*/
