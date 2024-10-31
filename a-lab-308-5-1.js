@@ -3,7 +3,7 @@
 // ***** Part 1: Thinking Functionally *****
 
 //Take an array of numbers and return the sum.
-let arrOfNum = [7, 3, 9, 21];
+/*let arrOfNum = [7, 3, 9, 21];
 function sumOfNums(arr) {
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -18,7 +18,7 @@ the sum of sumOfNums is: 40
 */
 
 // ******* Take an array of numbers and return the average ******
-function aveOfNum(aveNum) {
+/*function aveOfNum(aveNum) {
     let average;
     let sum = 0;
     for (i = 0; i < aveNum.length; i++) {
@@ -34,7 +34,7 @@ Output code below:The average of 7,3,9,21 is 10
 */
 
 // ****** Take an array of strings and return the longest string. *******
-const arrStrings = ["Adam", "Gregory", "Marcus", "Yannick"];
+/*const arrStrings = ["Adam", "Gregory", "Marcus", "Yannick"];
 function longestStr(str) {
     let longestStr = "";
     for (let name of str) {
@@ -52,7 +52,7 @@ The longest string in the array is Gregory
 */
 
 //Take an array of strings, and a number and return an array of the strings that are longer than the given number. 
-const arrStrings1 = ["Adam", "Gregory", "Marcus", "Yannick", "Christopher"];
+/*const arrStrings1 = ["Adam", "Gregory", "Marcus", "Yannick", "Christopher"];
 //return strings longer than the given number
 function arrStringsLongerThan(strArr, num) {
     let StringRuler = [];
@@ -65,7 +65,7 @@ function arrStringsLongerThan(strArr, num) {
 console.log(arrStringsLongerThan(arrStrings1, 6));
 /*
 Output code below:
-
+[ 'Gregory', 'Yannick', 'Christopher' ]-Adam was removed as he was too short :( (so sad)
 */
 
 //Take a number, n, and print every number between 1 and n without using loops. Use recursion.
@@ -143,22 +143,22 @@ function under50(arr, maxAge) {
 }
 const dataSorted = under50(data, 50);
 console.log(dataSorted);
-/*
-Output code below:
+
+/*Output code below:
 { id: 57, name: 'Bob', job: 'Fry Cook', age: 20 },
 { id: 48, name: 'Barry', job: 'Runner', age: 26 },
 { id: 42, name: 'Bruce', job: 'Knight', age: 42 }
-*/
 
-/*
-Output code below:
+
 // part 2 fourth bullet
-let ageArr = data.Sorted.map(function (person) {
+let ageArr = dataSorted.map(function (person) {
     // sorts out just the age input
     return Number (person.age);
 });
-
 console.log(ageArr);
+/*Output code below:
+[ 20, 26, 42 ]
+*/
 
 const sumOfAge = ageArr.reduce((sum, age) => {
     //adds all the age inputs in our new array for age
@@ -209,4 +209,3 @@ const insertnewarrayhere = copyofFamilyInOneYear.map(function (obj) {// map to t
 });
 console.log(insertnewarrayhere);
 //copy outputcode here
-*/
