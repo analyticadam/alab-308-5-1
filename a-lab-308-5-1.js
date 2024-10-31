@@ -3,7 +3,7 @@
 // ***** Part 1: Thinking Functionally *****
 
 //Take an array of numbers and return the sum.
-/*let arrOfNum = [7, 3, 9, 21];
+let arrOfNum = [7, 3, 9, 21];
 function sumOfNums(arr) {
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -18,7 +18,7 @@ the sum of sumOfNums is: 40
 */
 
 // ******* Take an array of numbers and return the average ******
-/*function aveOfNum(aveNum) {
+function aveOfNum(aveNum) {
     let average;
     let sum = 0;
     for (i = 0; i < aveNum.length; i++) {
@@ -34,7 +34,7 @@ Output code below:The average of 7,3,9,21 is 10
 */
 
 // ****** Take an array of strings and return the longest string. *******
-/*const arrStrings = ["Adam", "Gregory", "Marcus", "Yannick"];
+const arrStrings = ["Adam", "Gregory", "Marcus", "Yannick"];
 function longestStr(str) {
     let longestStr = "";
     for (let name of str) {
@@ -52,7 +52,7 @@ The longest string in the array is Gregory
 */
 
 //Take an array of strings, and a number and return an array of the strings that are longer than the given number. 
-/*const arrStrings1 = ["Adam", "Gregory", "Marcus", "Yannick", "Christopher"];
+const arrStrings1 = ["Adam", "Gregory", "Marcus", "Yannick", "Christopher"];
 //return strings longer than the given number
 function arrStringsLongerThan(strArr, num) {
     let StringRuler = [];
@@ -148,7 +148,7 @@ console.log(dataSorted);
 { id: 57, name: 'Bob', job: 'Fry Cook', age: 20 },
 { id: 48, name: 'Barry', job: 'Runner', age: 26 },
 { id: 42, name: 'Bruce', job: 'Knight', age: 42 }
-
+*/
 
 // part 2 fourth bullet
 let ageArr = dataSorted.map(function (person) {
@@ -165,6 +165,9 @@ const sumOfAge = ageArr.reduce((sum, age) => {
     return sum + age;
 },0);
 console.log(sumOfAge);
+/*Output code below:
+88
+*/
 
 //part 3 fifth bullet
 let avg = sumOfAge / ageArr.length; // divides the average age but the length of the array
@@ -180,12 +183,30 @@ const starwars = [
     {name: "Master Yoda", who: "Jedi", color: "Green" },
     ]
 starwars[0].age = 41;
-
+/*
+[
+  { name: 'Luke', who: 'Jedi', color: 'Blue', age: 41 },
+  { name: 'Darth Vader', who: 'Jedi', color: 'Black' },
+  { name: 'Chewy', who: 'Jedi', color: 'Brown' },
+  { name: 'Han Solo', who: 'Jedi', color: 'Blue' },
+  { name: 'Princess Leia', who: 'Jedi', color: 'White' },
+  { name: 'Master Yoda', who: 'Jedi', color: 'Green' }
+]
+*/
 
 console.log(starwars);
-//copy code output here
+/*
+    [
+  { name: 'Luke', who: 'Jedi', color: 'Blue', age: 42 },
+  { name: 'Darth Vader', who: 'Jedi', color: 'Black', age: NaN },
+  { name: 'Chewy', who: 'Jedi', color: 'Brown', age: NaN },
+  { name: 'Han Solo', who: 'Jedi', color: 'Blue', age: NaN },
+  { name: 'Princess Leia', who: 'Jedi', color: 'White', age: NaN },
+  { name: 'Master Yoda', who: 'Jedi', color: 'Green', age: NaN }
+]
+*/
 
-const copyofFamilyInOneYear = family.map(function (obj) { // map to the age key for each obj and increment by 1
+const copyofStarwarsInOneYear = starwars.map(function (obj) { // map to the age key for each obj and increment by 1
     return {
         name: obj.name,
         who: obj.who,
@@ -193,19 +214,42 @@ const copyofFamilyInOneYear = family.map(function (obj) { // map to the age key 
         age: Number(obj.age) + 1,
     };
 });
-console.log(copyofFamilyInOneYear);
-// copy output code here
 
 const date = new Date();
 console.log(date);
-//copy output code here
+/*
+Code output below:
+2024-10-31T23:25:11.130Z
+*/
 
-const insertnewarrayhere = copyofFamilyInOneYear.map(function (obj) {// map to the age key for each obj and increment by 1
+const newarrayplanet = copyofStarwarsInOneYear.map(function (obj) {// map to the age key for each obj and increment by 1
     return {
         name: obj.name,
         age: Number(obj.age),
         updated_at: (new Date())
     };
 });
-console.log(insertnewarrayhere);
-//copy outputcode here
+console.log(newarrayplanet);
+/*
+Output code below:
+[
+  { name: 'Luke', age: 42, updated_at: 2024-10-31T23:25:11.277Z },
+  {
+    name: 'Darth Vader',
+    age: NaN,
+    updated_at: 2024-10-31T23:25:11.277Z
+  },
+  { name: 'Chewy', age: NaN, updated_at: 2024-10-31T23:25:11.277Z },
+  { name: 'Han Solo', age: NaN, updated_at: 2024-10-31T23:25:11.277Z },
+  {
+    name: 'Princess Leia',
+    age: NaN,
+    updated_at: 2024-10-31T23:25:11.277Z
+  },
+  {
+    name: 'Master Yoda',
+    age: NaN,
+    updated_at: 2024-10-31T23:25:11.277Z
+  }
+]
+  */
